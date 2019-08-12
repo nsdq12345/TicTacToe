@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            table {
+                table-layout: fixed
+            }
+
+            table, tr, td {
+                border: 1px solid black
+            }
+
+            td {
+                text-align: center
+            }
+
+            input {
+                padding-left: 50px
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <text>Current Turn: </text>
+            <text id="currentTurn"></text>
+        </div>
+        <br>
+        <div>
+            <text>Set Custom Name:</text>
+            <select id="choosePiece">
+                <option value="X">X</option>
+                <option value="O">O</option>
+            </select>
+            <input id="nameInput"/>
+            <button id="nameButton">Set Name</button>
+        </div>
+        <br>
+        <table id='gametable' width="400" height="400">
+            <tr>
+                <td id='00'></td>
+                <td id='01'></td>
+                <td id='02'></td>
+            </tr>
+            <tr>
+                <td id='10'></td>
+                <td id='11'></td>
+                <td id='12'></td>
+            </tr>
+            <tr>
+                <td id='20'></td>
+                <td id='21'></td>
+                <td id='22'></td>
+            </tr>
+        </table>
+        <br>
+        <div>
+            <button id="reset">RESET</button>
+            <input id="hardModeButton" type="checkbox"/> Hard Mode
+        </div>
+        <br>
+        <div id='tally'></div>
+        <br>
+        <div>
+            <text id="results"></text>
+        </div>
+        <script src='app.js'>ttt = new TTT();</script>
+    </body>
+</html>
